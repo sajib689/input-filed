@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Filed</title>
+  </head>
+  <body>
+    <p id="input-text">Defult Text</p>
+    <input id="input-field" type="text" />
+    <button id="btn-update">Submit</button>
+    <script>
+      document
+        .getElementById("btn-update")
+        .addEventListener("click", function () {
+          const updateSetting = document.getElementById("input-field");
+          const inputText = updateSetting.value;
+          const p = document.getElementById("input-text");
+          p.innerText = inputText;
+          updateSetting.value = "";
+        });
+    </script>
+  </body>
+</html>

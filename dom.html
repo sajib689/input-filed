@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM</title>
+  </head>
+  <body>
+    <h1>Play With Dom</h1>
+    <button onclick="console.log('Sajib')">Click Me</button>
+
+    <button onclick="makeRed()">Make Red</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">
+      Make Yellow
+    </button>
+    <button id="make-blue" onclick="makeblue()">Make Blue</button>
+    <button id="make-pink">Pink</button>
+    <button id="make-purple">Purple</button>
+    <!-- <button id="orange">Orange</button> -->
+    <script>
+      //   document.getElementById(
+      //     "orange",
+      //     addEventListener("click", function orangeColor() {
+      //       document.body.style.backgroundColor = "orange";
+      //     })
+      // );
+      const makePurple = document.getElementById("make-purple");
+      makePurple.addEventListener("click", makeButton);
+      function makeButton() {
+        document.body.style.backgroundColor = "purple";
+      }
+      const pinkButton = document.getElementById("make-pink");
+      pinkButton.addEventListener("click", function makePink() {
+        document.body.style.backgroundColor = "pink";
+      });
+
+      function makeRed() {
+        document.body.style.backgroundColor = "red";
+      }
+    </script>
+    <script src="dom.js"></script>
+  </body>
+</html>
